@@ -1,4 +1,4 @@
-# FUCKING FIZZBUZZ
+#FIZZBUZZ
 import math
 
 num_list = range(1, 101)
