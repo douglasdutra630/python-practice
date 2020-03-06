@@ -190,3 +190,69 @@ role = 'guest'
 auth = 'can access' if role == 'admin' else 'fuck off'
 
 print(auth)
+
+#args & kwargs in one function
+
+def greeting(time_of_day, *args, **kwargs):
+    print(f"Hi! {' '.join(args)}, I hope you are having a great {time_of_day}!")
+
+    if kwargs:
+        print('Your tasks for the day are:')
+        for key, val in kwargs.items():
+            print(f"{key} => {val}")
+
+
+greeting('Morning',
+        'Kristine', 'Hudgens',
+        first = "Empty Dishwasher",
+        second = " Take dog outside",
+        third = "Math Homework")
+
+#lambda 
+
+full_name = lambda first, last: f'{first} {last}'
+
+
+def greeting1(name):
+  print(f'Hi there {name}')
+
+
+greeting1(full_name('Kristine', 'Hudgens'))
+
+# FUCKING FIZZBUZZ
+import math
+
+num_list = range(1, 101)
+
+def fizz_buzz (max_num):
+    for num in range(1, max_num + 1):
+        if num % 3 == 0 and num % 5 == 0:
+            print('FizzBuzz')
+        elif num % 3 == 0:
+            print('Fizz')
+        elif num % 5 == 0:
+            print('Buzz')
+        else:
+            print(num)
+
+fizz_buzz(100)
+
+#Random Hexadecimal
+import random
+
+def hex_maker():
+    random_hex = (str(random.choice("0123456789ABCDEF")) + str(random.choice("0123456789ABCDEF"))) * 4
+    print(f"Random Hex: #{random_hex}")
+
+hex_maker()
+
+#Hyphen String Sorter
+
+color_wheel = 'green-red-black-white'
+
+def string_sort():
+    colors = [ color for color in color_wheel.split('-')]
+    colors.sort()
+    print('-'.join(colors))
+
+string_sort()

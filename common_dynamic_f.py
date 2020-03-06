@@ -1,0 +1,1 @@
+# to become a storage doc with all of my most used dynamic functions
